@@ -1,0 +1,47 @@
+h1 {
+    border: 1px #eee solid;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    width: auto;
+    margin: 0 auto;
+    height: auto;
+    padding: 5px;
+    }
+
+.card-table {
+    border: 1px #eee solid;
+    display: table;
+    border-collapse: separate;
+    box-sizing: border-box;
+    text-indent: initial;
+    border-spacing: 2px;
+    width: auto;
+    height: auto;
+}
+.card-table thead {
+    left: 0 !important;
+    padding: 6px 15px;
+    background-color: #e97e62 !important;
+    color: rgb(255, 255, 255);
+    text-align: left;
+    font-size: .75rem;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    width: 100%;
+}
+.card-table tr {
+    background-color: #ffffff;
+    display: table-row;
+    vertical-align: inherit;
+    border-color: inherit;
+}
+.card-table th {
+    background-color: #e97e62 !important;
+}
+
+td {
+    width: 35%;
+    display: table-cell;
+    vertical-align: inherit;
+}
