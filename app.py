@@ -11,7 +11,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=['post', 'get'])
 def index():
-    driver = webdriver.Chrome('C:\\Users\\gsingh302\\OneDrive - DXC Production\\Desktop\\Automation\\Browser Drivers\\chromedriver.exe')
+    driver = webdriver.Chrome('C:\\Users\\gsingh302\\OneDrive - DXC Production\\Desktop\\Market Pro\\Market Fm\\MarketMan\\chromedriver.exe')
     driver.get('https://www.nseindia.com/get-quotes/equity?symbol=BCG')
 
     # Wait for the page to fully load
