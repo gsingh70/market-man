@@ -4,19 +4,15 @@ import pandas as pd
 from selenium import webdriver
 from bs4 import BeautifulSoup
 import time
-import os
+
 
 app = Flask(__name__)
 
 
 @app.route("/", methods=['post', 'get'])
 def index():
-    chrome_options = webdriver.ChromeOptions()
-    chrome_options.binary_location = os.environ.get("GOOGLE_CHROME_BIN")
-    chrome_options.add_argument("--headless")
-    chrome_options.add_argument("--disable-dev-shm-usage")
-    chrome_options.add_argument("--no-sandbox")
-    driver = webdriver.Chrome(executable_path=os.environ.get("C:\\Users\\gsingh302\\OneDrive - DXC Production\\Desktop\\Market Pro\\Market Fm\\MarketMan\\chromedriver.exe"), chrome_options=chrome_options)
+    
+    driver = webdriver.Chrome('C:\\Users\\gsingh302\\OneDrive - DXC Production\\Desktop\\Market Pro\\Market Fm\\MarketMan\\chromedriver.exe')
     driver.get('https://www.nseindia.com/get-quotes/equity?symbol=BCG')
 
     # Wait for the page to fully load
