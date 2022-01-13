@@ -15,6 +15,9 @@ aiohttp = "*"
 pandas = "*"
 lxml = "*"
 html5lib = "*"
+pipreqs = "*"
+wheel = "*"
+gunicorn = "*"
 
 [dev-packages]
 
