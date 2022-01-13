@@ -16,7 +16,7 @@ def index():
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("--no-sandbox")
-    driver = webdriver.Chrome('C:\\Users\\gsingh302\\OneDrive - DXC Production\\Desktop\\Market Pro\\Market Fm\\MarketMan\\chromedriver.exe')
+    driver = webdriver.Chrome(executable_path="CHROMEDRIVER_PATH", chrome_options=chrome_options)
     driver.get('https://www.nseindia.com/get-quotes/equity?symbol=BCG')
 
     # Wait for the page to fully load
