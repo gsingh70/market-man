@@ -18,6 +18,7 @@ html5lib = "*"
 pipreqs = "*"
 wheel = "*"
 gunicorn = "*"
+webdriver-manager = "*"
 
 [dev-packages]
 
