@@ -6,19 +6,17 @@ from bs4 import BeautifulSoup
 import time
 import os
 from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.chrome.service import Service
 
 app = Flask(__name__)
 
 @app.route("/", methods=['post', 'get'])
 def index():
     options = Options()
-    options.binary_location = os.environ.get(GOOGLE_CHROME_BIN)
+    options.binary_location = os.environ.get('GOOGLE_CHROME_BIN')
     options.add_argument('--headless')
-    options.add_argument('--disable-gpu')
     options.add_argument('--no-sandbox')
-    s= Service(str(os.environ.get(CHROMEDRIVER_PATH))) #executable_path=str(os.environ.get(CHROMEDRIVER_PATH))
-    driver = webdriver.Chrome(service=s, options=options)
+    options.add_argument('--disable-dev-sh-usage')
+    driver = webdriver.Chrome(executable_path=os.environ.get('CHROMEDRIVER_PATH'), chrome_options=options)
     driver.get('https://www.nseindia.com/get-quotes/equity?symbol=BCG')
 
     # Wait for the page to fully load
